@@ -11,16 +11,16 @@ package main;
  */
 public class ReverseNumber {
 
-    public static int numberReverse(int number) {
+    public static int numberReverse(int number) {//201
         int reverse = 0;
         while (number != 0) {
-            reverse = (reverse * 10) + (number % 10);
-            number = number / 10;
+            reverse = (reverse * 10) + (number % 10);//0,0,2
+            number = number / 10;//20,2,0
         }
         return reverse;
     }
 
     public static void main(String[] args) {
-        System.out.println(numberReverse(231));
+        System.out.println(numberReverse(201));
     }
 }

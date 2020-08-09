@@ -9,19 +9,10 @@ package main;
  *
  * @author rashid.khitilov
  */
-public class GCD {
+public class EquivalentStrings {
 
     public static void main(String[] args) {
-        System.out.println(GCD(22, 60));
-    }
-
-    public static int GCD(int a, int b) {
-        int t = 0;
-        while (b != 0) {
-            t = a;//22,60,22,16,6,4
-            a = b;//60,22,16,6,4,2
-            b = t % b;//22,16,6,4,2,0
-        }
-        return a;
+        String[] arr = {"aabbaa", "aab"};
+        String[] arr2 = {"aabbacc", "acc"};
     }
 }

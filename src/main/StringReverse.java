@@ -31,9 +31,21 @@ public class StringReverse {
         }
         return s1;
     }
+    public static String reverseStringWithStringBuilder(String s){
+        StringBuilder sb =new StringBuilder();
+        for (int i = s.length()-1; i >=0; i--) {
+            sb.append(s.charAt(i));
+        }
+        return sb.toString();
+    }
     public static void main(String a[]) {
         StringReverse srr = new StringReverse();
-        System.out.println("Result: " + srr.reverseString("Java2novice"));
-        System.out.println(reverseString("Rashid Khitilov"));
+        System.out.println("Result: " + srr.reverseString2("Java2novice"));
+        System.out.println(reverseString("Sanura Khitilova"));
+        System.out.println(reverseStringWithStringBuilder("Rashid Khitilov"));
+        System.out.println(reverseStringWithStringBuilder("Ramila Khalilova"));
+        System.out.println(reverseStringWithStringBuilder("Shakir Khitilov"));
+        System.out.println(reverseStringWithStringBuilder("Ulvi Khitilov"));
+        System.out.println(reverseStringWithStringBuilder("Coshgun Khitilov"));
     }
 }

@@ -5,6 +5,8 @@
  */
 package main;
 
+import java.util.Scanner;
+
 /**
  *
  * @author rashid.khitilov
@@ -24,6 +26,27 @@ public class DecimalToBinary {
     }
 
     public static void main(String[] args) {
-        printBinaryFormat(25);
+//        printBinaryFormat(439);
+        maximumNumberOfConsecutive1();
+    }
+//    Print a single base- integer denoting the maximum number of consecutive 's in the binary representation of .
+
+    public static void maximumNumberOfConsecutive1() {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int counter = 0;
+        int t=0;
+        while (n > 0) {
+            if (n % 2 == 1) {
+                counter++;
+                if(counter>=t){
+                    t=counter;
+                }
+            } else {
+                counter = 0;
+            }
+            n = n / 2;
+        }
+        System.out.println(t);
     }
 }

@@ -11,7 +11,9 @@ package main;
  */
 public class Fibanocci {
      public static void main(String[] args) {
-        System.out.println(FibanocciRec(1));
+        System.out.println(FibanocciRec(8));
+        System.out.println(fibanocciWithFor(8));
+        System.out.println(allFabonacciNumbers(8));
 
     }
 
@@ -28,6 +30,20 @@ public class Fibanocci {
             result = num3;
         }
         return result;
+    }
+    public static String allFabonacciNumbers(int stillnthFibanocci) {
+        int num1 = 0;
+        int num2 = 1;
+        int num3 = 0;
+
+       String allNum=num1+" "+num2+" ";
+        for (int i = 1; i <= stillnthFibanocci; i++) {
+            num3 = num1 + num2;
+            allNum+=num3+" ";
+            num1 = num2;
+            num2 = num3;
+        }
+        return allNum;
     }
 
     public static int FibanocciRec(int number) {
