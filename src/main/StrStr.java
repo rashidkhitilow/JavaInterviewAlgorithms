@@ -14,7 +14,8 @@ public class StrStr {
     public static void main(String[] args) {
         String haystack = "hello";
         String needle = "llo";
-        System.out.println(strStr(haystack, needle));
+//        System.out.println(strStr(haystack, needle));
+        System.out.println(strStr2("ceoydefthf5iyg5h5yts", "codefights"));
     }
 
     public static int strStr(String haystack, String needle) {
@@ -36,5 +37,28 @@ public class StrStr {
             }
         }
         return -1;
+    }
+
+    public static boolean strStr2(String characterSelection, String word) {
+        String currentWord = "";
+        int wordIndex = 0;
+        char[] chars = characterSelection.split('');
+    
+    for (let   char of   {
+            chars
+        }
+        )
+        {
+            if (char == = word[wordIndex]) {
+                currentWord = currentWord.concat(char);
+                wordIndex++;
+            }
+
+            if (currentWord == = word) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
